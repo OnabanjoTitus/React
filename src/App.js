@@ -1,23 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
-
+import Titus from "./Titus";
+import Male from "./Male";
 function App() {
+  let name='Titus'
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>
+      Hi my name is {name} and i am {4+3} years old;
+      </h1>
+      <Titus/>
+      <Titus/>
+      <Titus/>
+      <Male color="green"height="14ft" weight="12ft"/>
+      <Male color="black" height="15ft" weight="13ft"/>
+      <Male color="brown" height="16ft" weight="14ft"/>
+     
     </div>
   );
 }
