@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Male=({color,height,weight})=>{
+const Male=(props)=>{
 
     return(
         <div>
          <div>
-             {color}{height}{weight}
+             {props.color}{props.height}{props.weight}
          </div>
         </div>
     )
