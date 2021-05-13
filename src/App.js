@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Titus from "./Titus";
 import Male from "./Male";
+import New from "./New";
 function App() {
   let name='Titus'
   return (
@@ -15,7 +16,8 @@ function App() {
       <Male color="green"height="14ft" weight="12ft"/>
       <Male color="black" height="15ft" weight="13ft"/>
       <Male color="brown" height="16ft" weight="14ft"/>
-     
+      <New color="red" height="155ft" weight="12ft"/>
+
     </div>
   );
 }
