@@ -17,6 +17,10 @@ function App() {
       <Male color="black" height="15ft" weight="13ft"/>
       <Male color="brown" height="16ft" weight="14ft"/>
       <New color="red" height="155ft" weight="12ft"/>
+      <New color="red" height="155ft" weight="12ft"/>
+      <New color="red" height="155ft" weight="12ft"/>
+      <New color="red" height="155ft" weight="12ft"/>
+      
 
     </div>
   );

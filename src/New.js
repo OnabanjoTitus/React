@@ -1,12 +1,11 @@
 import React from 'react'
 
-const New=(props)=>{
+const New=({color, height, weight})=>{
 
     return(
         <div>
          <div>
-             
-             {props.color}{props.height}{props.weight}
+             {color}{height}{weight}
          </div>
         </div>
     )
