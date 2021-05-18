@@ -2,8 +2,9 @@ import React from 'react'
 
 const Input = () => {
     return (
-        <div>
-            
+        <div className="form-control">
+            <label htmlFor="text">Text</label>
+            <input type="text" placeholder="Enter text..."/>
         </div>
     )
 }

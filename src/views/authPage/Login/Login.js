@@ -7,7 +7,7 @@ const Login =()=>{
         <div>
         <Input/>
         <div className='loginBtn'>
-             <Button/>
+             <Button color='red'/>
         </div>
     </div>
     )
