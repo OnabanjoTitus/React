@@ -23,7 +23,6 @@ const Login =()=>{
     return(
         <div>
             <h5>Welcome</h5>
-        {/* <Input/> */}
         <div className="loginContainer">
              <Input label="username" getData={getData} datakey="username" icon="email"/>
              <Input label="password" getData={getData} datakey="password" icon="person"/>

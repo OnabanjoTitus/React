@@ -1,7 +1,10 @@
 
 
 
-const Button =({color})=>{
+const Button =({color,text,width,outline,action})=>{
+    
+    const borderOutline=`1px solid ${color}`
+
     const buttonStyle={
         cursor:'pointer',
         backgroundColor:color,
@@ -16,8 +19,8 @@ const Button =({color})=>{
     }
       
     return(
-        <button style={buttonStyle}>
-                SIGN IN
+        <button style={buttonStyle} onClick={action}>
+             {text}
         </button>
     )
 }
