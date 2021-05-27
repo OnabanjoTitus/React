@@ -4,12 +4,15 @@ import Input from '../../../components/reusables/Input'
 
 const Register = () => {
         let data={
+            email:'',
             username:'',
-            password:''
+            password:'',
+            confirmpassword:''
+
         }
-        const getData=(key,value)=>{
-            data[key]=value
-        }
+        function setData(key, value) {
+        data[key] = value
+    }
         const logData=()=>{
             console.log(data)
         }
@@ -24,10 +27,10 @@ const Register = () => {
         <div>
                <h5>Welcome</h5>
         <div className="loginContainer">
-             <Input label="email" getData={getData} datakey="username" icon="email"/>
-             <Input label="username" getData={getData} datakey="username" icon="person"/>
-             <Input label="password" getData={getData} datakey="username" icon="lock"/>
-             <Input label="confirm password" getData={getData} datakey="password" icon="lock"/>
+             <Input label="email" getData={setData} datakey="email" icon="email"/>
+             <Input label="username" getData={setData} datakey="username" icon="person"/>
+             <Input label="password" getData={setData} datakey="password" icon="lock"/>
+             <Input label="confirm password" getData={setData} datakey="confirmpassword" icon="lock"/>
         </div>
 
         <div className='loginBtn'>

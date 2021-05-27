@@ -17,6 +17,7 @@ const Input = ({label,datakey,getData,icon}) => {
         if (datakey) getData(datakey.toLowerCase(),value)
         setText(value)
     }
+
     return (
         <div style={inputContainer}>
             <label htmlFor="text">{label}</label>

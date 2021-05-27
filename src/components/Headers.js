@@ -5,7 +5,7 @@ import Button from './reusables/Button'
 
 
 const styles={
-    justifyContent:'space-between',
+    justifycontent:'space-between',
     display:'flex'
 }
 
@@ -16,7 +16,7 @@ const Headers = () => {
  let text = pathString(location)
  const goToRoute = () => {
      if(text==="login"){
-         history.push("/register")
+         history.push("/register") 
      }else{
          history.push("/login")
      }
