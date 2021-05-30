@@ -17,21 +17,24 @@ function App() {
   return (
     <div className="container">
         <h4>Welcome To My playful React Application</h4>
-       
+      
+            <>
         <Router>
-           <MainPage/>
+       
             <Switch>
-              <Route path="/login">
-                  <Loginin/>
+              <Route path="/login" component={Loginin}>
               </Route>
-              <Route path="/register">
-                    <Registration/>
+              <Route path="/register" component={Registration}>
+                  
+                  </Route>
+    
+              <Route path="" component={MainPage}>
               </Route>
-
+             
             </Switch>
 
         </Router>
-       
+       </>
           
       {/* <ReactTut/> */}
     {/* <Login/> */}

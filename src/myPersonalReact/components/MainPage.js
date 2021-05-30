@@ -1,6 +1,6 @@
 import React from 'react'
-import { useHistory, useLocation } from 'react-router-dom'
-import {pathString} from "C:/Users/DELL/Desktop/cohort5/src/helpers.js"
+import { useHistory} from 'react-router-dom'
+
 
 import SubmitButton from './reusables/SubmitButton'
 
@@ -9,20 +9,22 @@ const MainPage = () => {
         padding:"10px",
         margin:"1rem",
     }
-    let location = useLocation();
+
     let history = useHistory();
     const goToRoute = () => {
-        if(text==="login"){
-            history.push("/register") 
-        }else{
             history.push("/login")
-        }
     }
-    let text = pathString(location)
+    const goToRoute2 = () => {
+     history.push("/register") 
+    }
+
     return (
         <div>
         <div style={mainPageStyle}>
-        <SubmitButton color='blue' text={text==='login'?'SIGNUP':'LOGIN'} action={goToRoute} />
+        <SubmitButton color='blue' text={'LOGIN'} action={goToRoute} />
+        </div>
+        <div style={mainPageStyle}>
+        <SubmitButton color='blue' text={'SIGN-UP'} action={goToRoute2} />
         </div>
         </div>
     )

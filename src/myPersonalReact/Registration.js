@@ -2,7 +2,8 @@ import React from 'react'
 import InputingFields from './components/reusables/InputingFields'
 import PasswordingFields from './components/reusables/PasswordingFields'
 import SubmitButton from './components/reusables/SubmitButton';
-
+import { useHistory, useLocation } from 'react-router-dom'
+import {pathString} from "C:/Users/DELL/Desktop/cohort5/src/helpers.js"
 const Registration = () => {
     let data={
         firstName:'',
@@ -24,7 +25,17 @@ const Registration = () => {
 
 
     }
-  
+    let location = useLocation();
+    let history = useHistory();
+    const goToRoute = () => {
+        if(text==="login"){
+            history.push("/register") 
+        }else{
+            history.push("/login")
+        }
+    }
+    let text = pathString(location)
+
     return (
         <div style={stylingThisGuy}>
             <h2>Registration Page On My Playful React Application</h2>
@@ -36,8 +47,11 @@ const Registration = () => {
             <div  style={mainPageStyle}>
             <SubmitButton color='black' text='Register'/>
             </div>
+           <div  style={mainPageStyle}>
+               Already have an account? click here to Login
+           <SubmitButton color='blue' text={text==='login'?'SIGNUP':'LOGIN'} action={goToRoute} />
+           </div>
             
-
            
               
         </div>

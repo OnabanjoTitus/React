@@ -2,7 +2,8 @@ import React from 'react'
 import InputingFields from './reusables/InputingFields'
 import PasswordingFields from './reusables/PasswordingFields'
 import SubmitButton from './reusables/SubmitButton'
-
+import { useHistory, useLocation } from 'react-router-dom'
+import {pathString} from "C:/Users/DELL/Desktop/cohort5/src/helpers.js"
 const Loginin = () => {
     const stylingThisGuy={
         backgroundColor:'brown',
@@ -13,6 +14,17 @@ const Loginin = () => {
         padding:"10px",
         margin:"1rem",
     } 
+    let location = useLocation();
+    let history = useHistory();
+    const goToRoute = () => {
+        if(text==="login"){
+            history.push("/register") 
+        }else{
+            history.push("/login")
+        }
+    }
+    let text = pathString(location)
+    
     return (
         <div style={stylingThisGuy}>
             <h2>
@@ -23,9 +35,13 @@ const Loginin = () => {
            <div  style={mainPageStyle}>
            <SubmitButton color='black' text='login'/>
            </div>
+           <div  style={mainPageStyle}>
+            New Here? Click here to sign-up
+           <SubmitButton color='blue' text={text==='login'?'SIGNUP':'LOGIN'} action={goToRoute} />
+           </div>
             
 
-    
+
         </div>
     )
 }
