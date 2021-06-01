@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="container">
         <h4>Welcome To My playful React Application</h4>
-      
+{/*       
             <>
         <Router>
        
@@ -34,12 +34,12 @@ function App() {
             </Switch>
 
         </Router>
-       </>
+       </> */}
           
       {/* <ReactTut/> */}
-    {/* <Login/> */}
-    {/* <MoreButton/> */}
-    {/* <Router>
+    {/* <Login/>
+     <MoreButton/> */}
+     <Router>
       <Header/>
         <Switch>
             <Route path="/login">
@@ -50,7 +50,7 @@ function App() {
           </Route>
     </Switch>
 
-    </Router> */}
+    </Router>
     {/* <Loginin/> */}
     {/* <SubmitButton color="black" text="Click here boy"/> */}
     

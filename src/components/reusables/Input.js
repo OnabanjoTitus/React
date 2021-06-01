@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState,useEffect } from "react"
 
 const Input = ({label,datakey,getData,icon}) => {
     const [text,setText] = useState('')
@@ -17,6 +17,12 @@ const Input = ({label,datakey,getData,icon}) => {
         if (datakey) getData(datakey.toLowerCase(),value)
         setText(value)
     }
+    useEffect(()=>{
+        console.log("Login: i mounted")
+            return () => 
+            console.log("Login: i unmounted")
+        },[text]
+     )
 
     return (
         <div style={inputContainer}>
