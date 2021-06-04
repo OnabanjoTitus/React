@@ -13,19 +13,18 @@ const Headers = () => {
  let location = useLocation();
  let history = useHistory();
 
- let text = pathString(location)
  const goToRoute = () => {
-     if(text==="login"){
-         history.push("/register") 
+     if(location.pathname==="/auth/login"){
+         history.push("/auth/register") 
      }else{
-         history.push("/login")
+         history.push("/auth/login")
      }
  }
 
  return(
      <div style={styles}>
             <div>Header</div>
-            <Button color="black" text={text==='login'?'register':'login'} width="40%" outline={true} action={goToRoute}/>
+            <Button color="black" text={location.pathname==='/auth/login'?'register':'login'} width="40%" outline={true} action={goToRoute}/>
      </div>
  )
 

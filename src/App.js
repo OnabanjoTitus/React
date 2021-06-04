@@ -13,12 +13,25 @@ import SubmitButton from './myPersonalReact/components/reusables/SubmitButton';
 import Loginin from './myPersonalReact/components/Loginin';
 import MainPage from './myPersonalReact/components/MainPage';
 import Registration from './myPersonalReact/Registration';
+import AuthContainer from './views/authPage/AuthContainer';
+import Posts from './views/posts/Posts';
 function App() {
   return (
     <div className="container">
-        <h4>Welcome To My playful React Application</h4>
-{/*       
-            <>
+        <Router>
+          <Switch>
+                <Route path="/auth">
+                    <AuthContainer/>
+            </Route>
+            <Route path="/posts">
+                    <Posts/>
+            </Route>
+          </Switch>
+        </Router>
+
+        {/* <h4>Welcome To My playful React Application</h4>
+{/*        */}
+            {/* <>
         <Router>
        
             <Switch>
@@ -34,23 +47,12 @@ function App() {
             </Switch>
 
         </Router>
-       </> */}
+       </>  */}
           
       {/* <ReactTut/> */}
     {/* <Login/>
      <MoreButton/> */}
-     <Router>
-      <Header/>
-        <Switch>
-            <Route path="/login">
-                <Login/>
-            </Route>
-            <Route path="/register">
-                <Register/>
-          </Route>
-    </Switch>
 
-    </Router>
     {/* <Loginin/> */}
     {/* <SubmitButton color="black" text="Click here boy"/> */}
     
