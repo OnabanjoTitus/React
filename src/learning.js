@@ -52,7 +52,6 @@
 // console.log(loading)
 // setLoading(true)
 // console.log(setLoading)
-
 let cohort5=[
     {gender:"male",firstName:"ovie"},
     {gender:"female",firstName:"onyin"},
@@ -65,3 +64,6 @@ let cohort5=[
 ]
 let maleStudents=cohort5.filter(student=>student.gender==="male")
 maleStudents.forEach(student=>console.log(student.firstName))
+
+cohort5.map(student=>student['grade']='A')
+console.log(cohort5)
