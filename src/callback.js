@@ -1,7 +1,7 @@
 const ProcessVisa=(isWanted,userName,callBackA,callBackB,isFirstTime)=>{
    
     if(isWanted){
-        callbackA(userName)
+        callBackA(userName)
     }
     else{
         callBackB(userName)
