@@ -29,3 +29,9 @@ let isWanted=false
 let isFirstTime=false
 setTimeout(()=>{ProcessVisa(isWanted,userName,wantedTrue,wantedFalse,isFirstTime)},3000)
 checkTravelHistory(isFirstTime)
+
+let userName2="Bad guy"
+let isWanted2=true
+let isFirstTime2=true
+setTimeout(()=>{ProcessVisa(isWanted2,userName2,wantedTrue,wantedFalse,isFirstTime2)},3000)
+checkTravelHistory(isFirstTime)
